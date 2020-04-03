@@ -66,8 +66,8 @@ namespace HomeWork02._04
             // System.Console.WriteLine($"Текущая скорость = {my1.currentSpeed} км/ч");
             // System.Console.WriteLine();
             Book book = new Book();
-            // book.author = "Amelia";
-            // book.content = "Love story";
+            book.author = "Amelia";
+            book.content = "Love story";
             book.title = "Book of love";
             book.Show();
             Console.ReadKey(); 
@@ -80,7 +80,7 @@ namespace HomeWork02._04
         public string author = new Author().author;
         public string content = new Content().content;
         public void Show()
-        {
+        {Console.ForegroundColor = ConsoleColor.Red;
             if(title==null)
             {
                 System.Console.WriteLine($"Вы не ввели название книги.");
@@ -88,6 +88,7 @@ namespace HomeWork02._04
             else {
                 System.Console.WriteLine($"Название книги: {title}");
             }
+            Console.ForegroundColor = ConsoleColor.Green;
             if (author == null)
             {
                 System.Console.WriteLine($"Автор книги не известен.");
@@ -95,6 +96,7 @@ namespace HomeWork02._04
             else {
                 System.Console.WriteLine($"Автор книги: {author}");
             }
+            Console.ForegroundColor = ConsoleColor.Blue;
             if(content == null)
             {
                 System.Console.WriteLine($"Содержание книги пустое.");
@@ -102,6 +104,7 @@ namespace HomeWork02._04
             else {
                 System.Console.WriteLine($"Содержание книги: {content}");
             }
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
     class Title 
